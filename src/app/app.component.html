@@ -1,4 +1,7 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  <a [routerLink]="['home']" class='link'>Home</a>
+  <a [routerLink]="['about']" class='link'>About</a>
+</div>
+<div [@routeAnimation]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
